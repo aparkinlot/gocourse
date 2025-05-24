@@ -28,8 +28,8 @@ func maxPathSum(root *TreeNode) int {
 		return rootDFS.Val + max(lsum, rsum)
 	}
 
-	dfs := propogate(root)
-	return max(dfs, res)
+	_ = propogate(root)
+	return res
 }
 
 func main() {
