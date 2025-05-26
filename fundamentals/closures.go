@@ -4,7 +4,7 @@ package fundamentals
 
 import "fmt"
 
-func main() {
+func test_closures() {
 
 	// anon closure
 	counter := func() func(x int) int {

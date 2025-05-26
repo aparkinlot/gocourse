@@ -1,4 +1,4 @@
-package main
+package leetcode
 
 import (
 	"fmt"
@@ -32,7 +32,7 @@ func maxPathSum(root *TreeNode) int {
 	return res
 }
 
-func main() {
+func test_maxPathSum() {
 	root := &TreeNode{
 		Val: -10,
 		Left: &TreeNode{

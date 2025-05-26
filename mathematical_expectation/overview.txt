@@ -1,0 +1,46 @@
+Probability
+- Expectation = Average value of a random variable
+  - Random Variable (RV) = outcomes of an experiment
+    - Discrete RV = the RV can only be a fixed number of outcomes
+    - Continuous RV = the RV can be an infinite number of outcomes, determined through some function
+  - Expected Value is not equal to the most probable value
+    - Discrete -> E(x) = Σ (x_i * P(x_i)) -> the sum of each value multiplied by its Probability
+    - Continuous -> E(x) = ∫ x*P(x)dx
+
+Linearity of Expectation
+- The expected value of the sum of an arbitrary number of RV is equal to the sum of their individual and respective expected values
+
+*Expected Throws - One head
+- x = 1(0.5) + (x+1)(0.5)
+  - this is because the outcomes are recieving a head or recieving a tails
+    - specifically for recieving a tails on the first try, you are then expecting x more throws to get a head
+- Solve for x: x = 2
+
+*Expected Throws - Two consecutive heads
+- x = 2(0.5)(0.5) + (0.5)(0.5)(x+2) + (0.5)(x+1)
+  - by landing 2 heads first try, by leading one head, followed by a tail, by landing a tail first (restart)
+- Solve for x: x = 6
+
+*Expected Throws - N consecutive heads
+- x = (0.5)(x+1) + (0.5)(0.5)(x+2) + (0.5)(0.5)(0.5)(x+3) + ... + (0.5)^(n)*(x+n) + (0.5)^n*(n)
+- Solve for x: x = 2^(n+1)-2 -> GP & AGP series
+
+Bernaulli's Trial
+- An experiment is called a Bernaulli's Trial if it has exactly 2 outcomes, one of which is desired
+  - outcomes are represented/casted to be "yes/no" or "success/failure"
+- If the probability of success, P(x) = p, the expected number of trials to get a successs is 1/p
+- If the probability of success, P(x) = p, the expcted number of successes in n trials is np
+
+*Choose a Number - N students choose from 1-100, what is the expected number of students that chose a single digit number
+- np -> n(9/100)
+
+*Interview Candidates - Candiate Selection is 0.16, what is the expected number fo candidates that you will need to interview to ensure one is chosen
+np = 1 -> 1/0.16 = 6.25 -> 7
+- cannot take partial interviews
+
+*Coupon Collector - N distinct doupons are represented though an infinite set of items. What is the expected number of items one must buy to get all N distinct coupons
+- E(x_i) denotes the number of packets need to grab the ith new coupons
+- E(x_1) + ... + E(x_n)
+- Probability of ith new coupon -> (# available new coupons)/(n) -> (n-(i-1))/(n)
+  - E(x_i) = (n)/(n-i+1)
+  - E(x) = n*(1/n + 1/(n-1) + ... + 1/3 + 1/2 + 1)

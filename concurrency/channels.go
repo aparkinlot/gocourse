@@ -1,4 +1,4 @@
-package main
+package concurrency
 
 import "fmt"
 
@@ -8,7 +8,7 @@ import "fmt"
 // Channels are blocking whereas Goroutines are non-blocking
 // Concurrency errors are found at runtime (go runtime scheduler works with these concepts)
 
-func main() {
+func test_channels() {
 	// var := make(chan <type>)
 	greeting := make(chan string) // unbuffered channel, can take many values into this and reciever takes them out FIFO
 	greet := "Hello"

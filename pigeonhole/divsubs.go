@@ -1,4 +1,4 @@
-package main
+package pigeonhole
 
 import (
 	"bufio"
@@ -55,7 +55,7 @@ func divsubs(t int, nums []int) (int, []int) {
 	return -1, nil
 }
 
-func main() {
+func test_divsubs() {
 	reader := bufio.NewReader(os.Stdin)
 
 	size, _ := reader.ReadString('\n')
