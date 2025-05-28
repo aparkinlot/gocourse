@@ -1,0 +1,10 @@
+Consider the n Sets A_1, A_2, ... , A_n
+- To find the union of the entire collection of n, we have to:
+  - Add the elements of a set i, for 1 <= i <= n
+  - Subtract the intersecting elements of pairwise i, j, for 1 <= i, j <= n, and i < j
+  - Add back in the elements for triples i, j, k, for 1 <= i, j, k <= n, and i < j < k
+  - Subtract ...
+  - Add ...
+  - ...
+  - (-1)^(n+1) * (The intersection of every set from 1 to n)
+    - if n is odd -> this is addition, if n is even -> this is subtraction 

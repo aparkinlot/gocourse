@@ -22,4 +22,5 @@ func test_channels() {
 	// this is part of the main goroutine
 	// for any further values send to the channel, a subsequent receiver must be established
 	fmt.Println(receiver, greet)
+
 }

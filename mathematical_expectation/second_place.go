@@ -1,4 +1,4 @@
-package main
+package mathematicalexpectation
 
 import (
 	"cmp"
@@ -53,7 +53,7 @@ func secondPlace(n int, a []int) float64 {
 	return ans[n-1]
 }
 
-func main() {
+func test_secondPlace() {
 	a := []int{1, 2, 3}
 	fmt.Println(secondPlace(len(a), a))
 }
